@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="6dp">
+        <TextView
+            android:id="@+id/text_view_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/text_view_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Penumpang"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/text_view_alamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat"
+            android:textSize="18sp"
+            android:maxLines="2"
+            />
+        <TextView
+            android:id="@+id/text_view_trip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trip"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
