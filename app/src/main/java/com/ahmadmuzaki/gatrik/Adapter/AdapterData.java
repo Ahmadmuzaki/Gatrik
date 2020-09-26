@@ -1,14 +1,17 @@
 package com.ahmadmuzaki.gatrik.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ahmadmuzaki.gatrik.Activity.PindahActivity;
 import com.ahmadmuzaki.gatrik.Model.DataModel;
 import com.ahmadmuzaki.gatrik.R;
 
@@ -33,8 +36,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
     public HolderData onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //inflate ke card data penumpang, parent sebagai root
         View layout = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_data_penumpang, parent, false);
-        HolderData holder = new HolderData(layout);
-        return holder;
+        return new HolderData(layout);
     }
 
     @Override
@@ -47,6 +49,15 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
         holder.textViewNama.setText(dataModel.getNama());
         holder.textViewAlamat.setText(dataModel.getAlamat());
         holder.textViewTrip.setText(dataModel.getTrip());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent  = new Intent(holder.itemView.getContext(), PindahActivity.class);
+                intent.putExtra(PindahActivity.EXTRA_DATA_MODEL, dataModel);
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
