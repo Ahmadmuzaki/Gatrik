@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -16,6 +17,8 @@ import com.ahmadmuzaki.gatrik.Adapter.AdapterData;
 import com.ahmadmuzaki.gatrik.Model.DataModel;
 import com.ahmadmuzaki.gatrik.Model.ResponseModel;
 import com.ahmadmuzaki.gatrik.R;
+import com.ahmadmuzaki.gatrik.TambahDataActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +27,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private RecyclerView rvData;
     private RecyclerView.Adapter adData;
     private RecyclerView.LayoutManager lmData;
@@ -38,9 +41,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         swipeRefreshLayout = findViewById(R.id.srl_data);
         progressBar = findViewById(R.id.pb_data);
         rvData = findViewById(R.id.rview_data);
+        FloatingActionButton tambahData = findViewById(R.id.tambah_data);
+        tambahData.setOnClickListener(this);
+
         lmData = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvData.setLayoutManager(lmData);
 //        ambilData(); digantikan dengan ambildata yang ada di methon onResume
@@ -88,5 +95,13 @@ public class MainActivity extends AppCompatActivity {
                 progressBar.setVisibility(View.INVISIBLE);
             }
         });
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.tambah_data){
+            Intent intentTambahData = new Intent(MainActivity.this, TambahDataActivity.class);
+            startActivity(intentTambahData);
+        }
     }
 }

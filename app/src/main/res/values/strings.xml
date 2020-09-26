@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Gatrik</string>
     <string name="halaman_pindah">Halaman Pindah</string>
+    <string name="ini_halaman_tambah_data">Ini Halaman Tambah Data</string>
 </resources>
