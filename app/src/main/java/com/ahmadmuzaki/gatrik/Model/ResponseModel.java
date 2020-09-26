@@ -4,7 +4,7 @@ import java.util.List;
 
 public class ResponseModel {
     private int kode;
-    private  String pesan;
+    private String pesan;
     private List<DataModel> data;
 
     public int getKode() {

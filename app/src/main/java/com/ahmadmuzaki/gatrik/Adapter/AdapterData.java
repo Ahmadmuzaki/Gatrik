@@ -17,7 +17,7 @@ import java.util.List;
 //Adapter Data berfungsi untuk Mengalirkan Data dari database ke cardview
 //Class AdapterData akan diturunkan dari RecycleView.Adapter yang membutuhkan VH(ViewHolder)
 //Jika Error makan pilih implement Method dan pilih 3 method tambahan
-public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
+public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
     //Menyiapkan constructor
     //Context = wakil activity di class non activity
     private Context ctx;
@@ -56,7 +56,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData>{
 
     //Membuat class di dalam class, catatan hanya boleh ada 1 kelas public dalam 1 file java
     //HolderData digunakan untuk menghandle cardview
-    public class HolderData extends RecyclerView.ViewHolder{
+    public class HolderData extends RecyclerView.ViewHolder {
         TextView textViewId, textViewNama, textViewAlamat, textViewTrip;
 
         public HolderData(@NonNull View itemView) {
