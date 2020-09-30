@@ -2,4 +2,15 @@
     <string name="app_name">Gatrik</string>
     <string name="halaman_pindah">Halaman Pindah</string>
     <string name="ini_halaman_tambah_data">Ini Halaman Tambah Data</string>
+    <string name="save">Save</string>
+    <string name="masukkan_tanggal_boss">Masukkan Tanggal Boss</string>
+    <string name="masukkan_jam_boss">Masukkan Jam Boss</string>
+    <string name="simpan">Simpan</string>
+    <string name="nama">Nama</string>
+    <string name="alamat">Alamat</string>
+    <string name="no_handphone">No Handphone</string>
+    <string name="trip">Trip</string>
+    <string name="tanggal_berangkat">Tanggal Berangkat</string>
+    <string name="jam_berangkat">Jam Berangkat</string>
+    <string name="book">Book</string>
 </resources>

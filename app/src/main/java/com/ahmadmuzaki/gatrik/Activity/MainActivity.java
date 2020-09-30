@@ -17,7 +17,6 @@ import com.ahmadmuzaki.gatrik.Adapter.AdapterData;
 import com.ahmadmuzaki.gatrik.Model.DataModel;
 import com.ahmadmuzaki.gatrik.Model.ResponseModel;
 import com.ahmadmuzaki.gatrik.R;
-import com.ahmadmuzaki.gatrik.TambahDataActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -79,8 +78,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
                 int kode = response.body().getKode();
-                String pesan = response.body().getPesan();
-                Toast.makeText(MainActivity.this, "Kode : " + kode + "|Pesan : " + pesan, Toast.LENGTH_SHORT).show();
+//                String pesan = response.body().getPesan();
+//                Toast.makeText(MainActivity.this, "Kode : " + kode + "|Pesan : " + pesan, Toast.LENGTH_SHORT).show();
                 listPenumpang = response.body().getData();
                 adData = new AdapterData(MainActivity.this, listPenumpang);
                 rvData.setAdapter(adData);
@@ -100,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.tambah_data){
-            Intent intentTambahData = new Intent(MainActivity.this, TambahDataActivity.class);
+            Intent intentTambahData = new Intent(MainActivity.this, TambahActivity.class);
             startActivity(intentTambahData);
         }
     }

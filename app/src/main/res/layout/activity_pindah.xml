@@ -3,12 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.PindahActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Activity.PindahActivity">
 
     <TextView
         android:id="@+id/tv_pindah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/halaman_pindah" />
+        android:text="@string/halaman_pindah"
+        android:textSize="22sp"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"/>
+
 </LinearLayout>

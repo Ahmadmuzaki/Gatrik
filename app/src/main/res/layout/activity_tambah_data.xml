@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TambahDataActivity"
+    tools:context=".Activity.TambahDataActivity"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -12,4 +12,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/ini_halaman_tambah_data"/>
+
+    <EditText
+        android:id="@+id/edt_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/masukkan_tanggal_boss"
+        android:inputType="date"
+        android:focusable="false"
+        android:drawableEnd="@drawable/ic_date"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/edt_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/masukkan_jam_boss"
+        android:inputType="time"
+        android:focusable="false"
+        android:drawableEnd="@drawable/ic_date"/>
 </LinearLayout>
